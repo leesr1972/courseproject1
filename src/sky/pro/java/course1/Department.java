@@ -8,4 +8,17 @@ public class Department {
         this.numberOfDepartment = numberOfDepartment;
         this.nameOfDepartment = nameOfDepartment;
     }
+
+    public int getNumberOfDepartment() {
+        return numberOfDepartment;
+    }
+
+    public String getNameOfDepartment() {
+        return nameOfDepartment;
+    }
+
+    @Override
+    public String toString() {
+        return nameOfDepartment;
+    }
 }
