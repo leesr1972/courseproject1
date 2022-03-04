@@ -16,8 +16,6 @@ public class Employee {
         this.id = id;
     }
 
-
-
     public String getFullName() {
         return fullName;
     }
@@ -58,6 +56,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return id + ". " + fullName + ". " + position + ". Отдел: " + department + ".";
+        return id + ". " + fullName + ". " + position + ". Отдел: " + department + ", заработная плата: " + salary + "руб.";
+    }
+
+    public String toStringFullName() {
+        return id + ". " + fullName + ". ";
     }
 }

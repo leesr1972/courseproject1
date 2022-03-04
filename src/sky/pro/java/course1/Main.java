@@ -5,18 +5,51 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Department admDepartment = new Department(1, "Руководство");
-        Department finDepartvent = new Department(2, "Бухгалтерия");
+        Department finDepartment = new Department(2, "Бухгалтерия");
         Department hrDepartment = new Department(3, "Отдел кадров");
         Department itDepartment = new Department(4, "Технический отдел");
         Department salesDepartment = new Department(5, "Отдел продаж");
 
-        EmployeeBook empl = new EmployeeBook();
+        EmployeeBook newEmployee = new EmployeeBook();
         int id = 1;
-        empl.addEmployee("Петров Юрий Сергеевич", admDepartment, 200_000f, "Генеральный директор", id);
+        newEmployee.addEmployee("Петров Юрий Сергеевич", admDepartment, 200_000f, "Генеральный директор", id);
         id++;
-        empl.addEmployee("Якобсон Иосиф Абрамович", admDepartment, 180_000f, "Заместитель генерального директора", id);
+        newEmployee.addEmployee("Якобсон Иосиф Абрамович", admDepartment, 180_000f, "Заместитель генерального директора", id);
+        id++;
+        newEmployee.addEmployee("Стивен Джексон", finDepartment, 180_000f, "Финансовый директор", id);
+        id++;
+        newEmployee.addEmployee("Ким Мария Вячеславовна", finDepartment, 150_000f, "Главный бухгалтер", id);
+        id++;
+        newEmployee.addEmployee("Мансурова Амира Ринатовна", hrDepartment, 150_000f, "Начальник отдела кадров", id);
+        id++;
+        newEmployee.addEmployee("Шевченко Ирина Николаевна", hrDepartment, 120_000f, "Инженер по организации труда", id);
+        id++;
+        newEmployee.addEmployee("Яцехиро Анимото", itDepartment, 180_000f, "Главный инженер", id);
+        id++;
+        newEmployee.addEmployee("Дорошенко Матвей Семенович", itDepartment, 150_000f, "Системный администратор", id);
+        id++;
+        newEmployee.addEmployee("Абдуллаев Бахром Саидович", itDepartment, 100_000f, "Инженер по АХЧ", id);
+        id++;
+        newEmployee.addEmployee("Григорян Ашот Назимович", salesDepartment, 180_000f, "Коммерческий директор", id);
+        id++;
+        newEmployee.addEmployee("Бочорошвили Георгий Гурамович", salesDepartment, 120_000f, "Менеджер по рекламе", id);
         id++;
 
-        empl.printAllStaff();
+        newEmployee.printAllStaff();
+
+        System.out.println();
+        newEmployee.calculateAllSalaries();
+
+        System.out.println();
+        newEmployee.findMinSalary();
+
+        System.out.println();
+        newEmployee.findMaxSalary();
+
+        System.out.println();
+        newEmployee.calculateMediumSalary();
+
+        System.out.println();
+        newEmployee.printFullNameOfAllEmployees();
     }
 }
