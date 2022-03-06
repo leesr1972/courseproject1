@@ -32,9 +32,10 @@ public class Main {
         id++;
         newEmployee.addEmployee("Григорян Ашот Назимович", salesDepartment, 180_000f, "Коммерческий директор", id);
         id++;
-        newEmployee.addEmployee("Бочорошвили Георгий Гурамович", salesDepartment, 120_000f, "Менеджер по рекламе", id);
+        newEmployee.addEmployee("Бочорошвили Георгий Гурамович", salesDepartment, 120_000f, "Инженер-маркетолог:)", id);
         id++;
 
+        System.out.println();
         newEmployee.printAllStaff();
 
         System.out.println();
@@ -51,5 +52,26 @@ public class Main {
 
         System.out.println();
         newEmployee.printFullNameOfAllEmployees();
+
+        System.out.println();
+        newEmployee.indexSalary(10f);
+
+        System.out.println();
+        newEmployee.dataOfDepartment(3);
+
+        System.out.println();
+        newEmployee.indexSalaryOfDepartment(4, 20f);
+
+        System.out.println();
+        newEmployee.printStaffOfDepartment(2);
+
+        System.out.println();
+        newEmployee.levelOfSalary(150_000f);
+
+        System.out.println();
+        newEmployee.disMiss("Яцехиро Анимото");
+
+        System.out.println();
+        newEmployee.moveEmployee("Дорошенко Матвей Семенович", 1, "Технический директор", 180_000f);
     }
 }

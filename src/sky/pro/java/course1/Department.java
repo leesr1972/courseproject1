@@ -17,6 +17,10 @@ public class Department {
         return nameOfDepartment;
     }
 
+    public void setNumberOfDepartment(int numberOfDepartment) {
+        this.numberOfDepartment = numberOfDepartment;
+    }
+
     @Override
     public String toString() {
         return nameOfDepartment;

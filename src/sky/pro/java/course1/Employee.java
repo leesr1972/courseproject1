@@ -36,8 +36,6 @@ public class Employee {
         return id;
     }
 
-
-
     public void setDepartment(Department department) {
         this.department = department;
     }
@@ -61,5 +59,13 @@ public class Employee {
 
     public String toStringFullName() {
         return id + ". " + fullName + ". ";
+    }
+
+    public String toStringNameWithSalary() {
+        return id + ". " + fullName + ", " + position + ", заработная плата - " + salary + " руб.";
+    }
+
+    public String toStringNameWithPosition() {
+        return id + ". " + fullName + " - " + position + ". ";
     }
 }
