@@ -8,11 +8,11 @@ public class EmployeeBook {
         this.staffOfEmployee = new Employee[20];
     }
 
-    public void addEmployee(String fullName, Department department, float salary, String position, int id) {
+    public void addEmployee(String fullName, Department department, float salary, String position) {
         if (sizeOfStaff >= staffOfEmployee.length) {
             System.out.println("Штат полностью сформирован. Новый сотрудник не может быть принят.");
         }
-        Employee newEmployee = new Employee(fullName, department, salary, position, id);
+        Employee newEmployee = new Employee(fullName, department, salary, position);
         for (int i = 0; i < staffOfEmployee.length; i++) {
             if (staffOfEmployee[i] == null) {
                 staffOfEmployee[i] = newEmployee;
@@ -114,7 +114,7 @@ public class EmployeeBook {
         for (int i = 0; i < staffOfEmployee.length; i++) {
             if (staffOfEmployee[i] != null) {
                 if (staffOfEmployee[i].getDepartment().getNumberOfDepartment() == numberOfDepartment) {
-                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition(), staffOfEmployee[i].getId());
+                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition());
                     sizeOfDepartment++;
                 }
             }
@@ -148,7 +148,7 @@ public class EmployeeBook {
         for (int i = 0; i < staffOfEmployee.length; i++) {
             if (staffOfEmployee[i] != null) {
                 if (staffOfEmployee[i].getDepartment().getNumberOfDepartment() == numberOfDepartment) {
-                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition(), staffOfEmployee[i].getId());
+                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition());
                     sizeOfDepartment++;
                 }
             }
@@ -163,7 +163,7 @@ public class EmployeeBook {
         for (int i = 0; i < staffOfEmployee.length; i++) {
             if (staffOfEmployee[i] != null) {
                 if (staffOfEmployee[i].getDepartment().getNumberOfDepartment() == numberOfDepartment) {
-                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition(), staffOfEmployee[i].getId());
+                    employeeOfDepartment.addEmployee(staffOfEmployee[i].getFullName(), staffOfEmployee[i].getDepartment(), staffOfEmployee[i].getSalary(), staffOfEmployee[i].getPosition());
                     sizeOfDepartment++;
                 }
             }

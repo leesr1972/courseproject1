@@ -2,18 +2,19 @@ package sky.pro.java.course1;
 
 public class Employee {
 
+    private static int counter = 1;
     private final String fullName;
     private Department department;
     private float salary;
     private String position;
     private int id;
 
-    public Employee(String fullName, Department department, float salary, String position, int id) {
+    public Employee(String fullName, Department department, float salary, String position) {
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
         this.position = position;
-        this.id = id;
+        this.id = counter++;
     }
 
     public String getFullName() {
@@ -48,10 +49,6 @@ public class Employee {
         this.position = position;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
         return id + ". " + fullName + ". " + position + ". Отдел: " + department + ", заработная плата: " + salary + "руб.";
@@ -63,9 +60,5 @@ public class Employee {
 
     public String toStringNameWithSalary() {
         return id + ". " + fullName + ", " + position + ", заработная плата - " + salary + " руб.";
-    }
-
-    public String toStringNameWithPosition() {
-        return id + ". " + fullName + " - " + position + ". ";
     }
 }
